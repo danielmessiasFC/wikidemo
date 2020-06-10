@@ -1,10 +1,5 @@
 BRANCH := $(shell git rev-parse --abbrev-ref HEAD)
 
-check-master:
-ifneq ($(BRANCH),master)
-	@echo "Must be on master branch to push to wiki"
-endif
-
 push-wiki:
 ifneq ($(BRANCH),master)
 	@echo "Must be on master branch to push to wiki"
