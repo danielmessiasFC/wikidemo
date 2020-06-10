@@ -9,6 +9,7 @@ push-wiki:
 ifneq ($(BRANCH),master)
 	@echo "Must be on master branch to push to wiki"
 else
+	git pull --rebase && \
 	cd wiki && \
 	git init && \
 	git remote add origin git@github.com:danielmessiasFC/wikidemo.wiki.git && \
